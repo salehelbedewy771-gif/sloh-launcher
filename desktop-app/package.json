@@ -1,0 +1,27 @@
+{
+  "name": "sloh-launcher",
+  "version": "0.1.0",
+  "description": "SLOH Launcher desktop application",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "minecraft-launcher-core": "^3.18.0",
+    "prismarine-auth": "^2.7.0"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.sloh.launcher",
+    "productName": "SLOH Launcher",
+    "directories": { "output": "dist" },
+    "files": ["**/*", "!dist/**"],
+    "win": { "target": ["nsis", "portable"] }
+  }
+}
